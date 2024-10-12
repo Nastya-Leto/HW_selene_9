@@ -47,7 +47,8 @@ class RegistrationPage:
     def submit_button(self):
         browser.element('#submit').click()
 
-    def should_registered_user_with(self, full_name, email, female, number, birthday, subjects, hobbies, picture,
+    def should_registered_user_with(self, full_name, email, female, number, birthday, subjects, hobbies,
+                                    file_name_download,
                                     address, state):
         browser.element('.modal-content').element('table').all('td').even.should(
             have.exact_texts(
@@ -58,6 +59,6 @@ class RegistrationPage:
                 birthday,
                 subjects,
                 hobbies,
-                'image.jpg',
+                file_name_download,
                 address,
                 state))

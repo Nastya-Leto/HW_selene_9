@@ -1,5 +1,4 @@
 from pages.registration_page import RegistrationPage
-import os
 
 registration_page = RegistrationPage()
 first_name = 'Анастасия'
