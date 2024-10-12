@@ -3,7 +3,7 @@ from selene import browser
 from selenium import webdriver
 
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="function", autouse=True)
 def browser_settings():
     browser.config.base_url = 'https://demoqa.com'
     browser.config.window_height = 1080
