@@ -11,7 +11,7 @@ def test_fill_form():
     registration_page.fill_user_email('test@mail.ru')
     registration_page.fill_female()
     registration_page.fill_user_number('7927000000')
-    registration_page.fill_date_of_birth(20,6,1995)
+    registration_page.fill_date_of_birth(20, 6, 1995)
     registration_page.fill_subjects('Arts')
     registration_page.fill_hobbies()
     registration_page.fill_picture(download_picture)
