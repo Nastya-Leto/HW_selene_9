@@ -1,10 +1,12 @@
 from selene import browser, be, have
+import os
 
 from data.users import User
 
 
 class RegistrationPage:
-    file_path = r"C:\Users\user\PycharmProjects\HW_selene_9\resources\image.jpg"
+    current_dir = os.path.dirname(__file__)
+    file_path = os.path.abspath(os.path.join(current_dir, '..', 'resources', 'image.jpg'))
 
     def open(self, value):
         browser.open(value)
