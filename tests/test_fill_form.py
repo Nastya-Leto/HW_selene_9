@@ -1,9 +1,11 @@
 from pages.registration_page import RegistrationPage
+import os
 
 
 def test_fill_form():
     registration_page = RegistrationPage()
-    download_picture = rf"C:\Users\user\PycharmProjects\HW_selene_9\resources\image.jpg"
+    current_dir = os.path.dirname(__file__)
+    download_picture = os.path.abspath(os.path.join(current_dir, '..', 'resources', 'image.jpg'))
 
     registration_page.open('/automation-practice-form')
     registration_page.fill_first_name('Анастасия')
